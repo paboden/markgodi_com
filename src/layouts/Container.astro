@@ -1,0 +1,113 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+  bg?: "blue" | "tan" | "yellow" | "white" | "gray" | "black" | "peach";
+  spacing?: "none" | "small" | "normal" | "extra" | "full";
+}
+
+const { bg = "", spacing = "normal", ...attr } = Astro.props;
+---
+
+<section class:list={[bg, spacing, attr.class]} {...attr}>
+  <div class="container">
+    <slot />
+  </div>
+</section>
+
+<style is:global>
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: clamp(36ch, 100%, 120ch);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 3.25rem;
+  }
+
+  .none > .container {
+    padding-block: 0;
+  }
+
+  .small > .container {
+    padding-block: 1.5rem;
+  }
+
+  .extra > .container {
+    padding-block: 5rem;
+  }
+
+  .full > .container {
+    padding-block: 30dvh;
+  }
+
+  .blue:is(header, section, footer, div) {
+    background-color: #244057;
+    color: #fbf7ec;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(032, 048, 061, 0.9),
+        rgba(032, 048, 061, 0.95)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  .tan:is(header, section, footer, div) {
+    color: #244057;
+    background-color: #f2ead6;
+  }
+
+  .yellow:is(header, section, footer, div) {
+    color: #244057;
+    background-color: #ebc975;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(235, 201, 117, 0.8),
+        rgba(235, 201, 117, 0.95)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  .white:is(header, section, footer, div) {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  .gray:is(header, section, footer, div) {
+    background-color: #dddddd;
+    color: #333333;
+  }
+
+  .black:is(header, section, footer, div) {
+    background-color: #111111;
+    color: #ffffff;
+  }
+
+  .peach:is(header, section, footer, div) {
+    background-color: #fef6ef;
+    color: #244057;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(254, 246, 239, 0.8),
+        rgba(254, 246, 239, 0.95)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  .shadow {
+    box-shadow: 0 0.25rem 1rem rgba(032, 048, 061, 0.15);
+    z-index: 1;
+    position: relative;
+  }
+</style>

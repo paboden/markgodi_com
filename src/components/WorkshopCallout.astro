@@ -1,0 +1,180 @@
+---
+import Blockquote from "../components/Blockquote.astro";
+---
+
+<div class="columns" id="introduction">
+  <div class="left">
+    <hgroup>
+      <h2>Slowbuilt: Workshop</h2>
+      <p class="lead">Growth, Without Panic</p>
+      <hr />
+      <p class="small">A companion workshop series for the Slowbuilt book.</p>
+    </hgroup>
+  </div>
+
+  <div class="right">
+    <h3>What is it?</h3>
+    <p>
+      Slowbuilt is a three-session workshop series designed to help students,
+      educators, and school communities rethink how growth, progress, and
+      potential are understood. Rather than motivating through pressure or
+      addressing disengagement with compliance-based fixes, Slowbuilt helps
+      participants reinterpret progress accurately, recognize misalignment
+      instead of failure, and regain agency without urgency.
+    </p>
+    <p>
+      The workshop is experiential, reflective, and psychologically safe. It
+      does not use diagnostic language, require public sharing, or promote
+      one-size-fits-all solutions.
+    </p>
+
+    <h3>How it works</h3>
+    <p>
+      The series consists of three 75–90 minute sessions, each built around an
+      anchor activity that participants experience before any explanation or
+      instruction.
+    </p>
+
+    <ul class="links">
+      <li>
+        <a class="yellow" href="mailto:mark@markgodi.com"
+          >Contact me for more information</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block: 0 3rem;
+  }
+
+  @media (min-width: 120ch) {
+    .columns {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+
+  .columns > div {
+    flex: 1;
+  }
+
+  .left {
+    max-width: 35rem;
+  }
+
+  @media (min-width: 80ch) {
+    .left {
+      max-width: 25rem;
+    }
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 4.5vw, 3rem);
+    line-height: 1.2;
+    margin-block: 2rem 1.25rem;
+  }
+
+  hgroup p {
+    font-family: "EB Garamond", serif;
+    /* font-size: clamp(1.5rem, 4vw, 2.25rem); */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  p.lead {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    margin-top: 0;
+    font-family: "EB Garamond", serif;
+  }
+
+  p.small {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-top: 0;
+    font-family: "EB Garamond", serif;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #ebc975;
+    margin: 1rem 0;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: 80ch) {
+    .links {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 80ch) {
+    .links {
+      flex-direction: row;
+      margin: 3rem 0;
+      justify-content: flex-start;
+    }
+  }
+
+  .links a {
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 0.02rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    min-width: 20rem;
+    transition: all 0.3s;
+    margin-block: auto;
+    color: #244057;
+    background-color: #ebc975;
+  }
+  @media (min-width: 80ch) {
+    .links a {
+      padding: 0.8rem 2rem;
+      min-width: 15rem;
+      text-align: center;
+    }
+  }
+
+  .links a:hover {
+    background-color: #244057;
+    color: white;
+    transition: all 0.3s;
+  }
+</style>

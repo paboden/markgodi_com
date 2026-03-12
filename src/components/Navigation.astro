@@ -1,0 +1,110 @@
+---
+
+---
+
+<nav class="menu">
+  <div class="menu__trigger">
+    <div class="menu__trigger__icon menu__trigger__open">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+        ><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        ></path></svg
+      >
+    </div>
+    <div class="menu__trigger__icon menu__trigger__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+        ><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path
+          d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+        ></path></svg
+      >
+    </div>
+  </div>
+
+  <ul class="menu__links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#book">Book</a></li>
+    <li><a href="#workshops">Workshop</a></li>
+    <li><a href="#connect">Connect</a></li>
+    <li><a href="#blog">Blog</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    /* position: fixed; */
+    /* inset: 0; */
+    background-color: rgba(32, 48, 61, 0.95);
+  }
+
+  @media (min-width: 120ch) {
+    nav {
+      position: relative;
+      background-color: transparent;
+    }
+  }
+
+  .menu__trigger {
+    display: flex;
+  }
+
+  .menu__links {
+    display: none;
+  }
+
+  @media (min-width: 120ch) {
+    .menu__trigger {
+      display: none;
+    }
+
+    .menu__links {
+      display: flex;
+    }
+  }
+
+  .menu__trigger__icon,
+  .menu__trigger__icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    color: rgba(251, 247, 236, 0.7);
+  }
+
+  .menu__trigger__icon svg {
+    fill: currentColor;
+    color: currentColor;
+  }
+
+  nav ul {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: rgba(251, 247, 236, 0.7);
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    border-inline-start: 1px solid rgba(251, 247, 236, 0.7);
+    transition: all 0.3s;
+    /* border-radius: 0.5rem; */
+    /* color: rgba(20, 20, 20, 0.9); */
+    /* background-color: #ebc975; */
+    /* background-color: rgba(255, 255, 255, 0.9); */
+  }
+
+  nav li:first-child a {
+    border-inline-start: none;
+  }
+
+  nav a:hover {
+    background-color: rgba(32, 48, 61, 0.9);
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.3s;
+  }
+</style>

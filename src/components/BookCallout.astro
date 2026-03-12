@@ -1,0 +1,197 @@
+---
+import Blockquote from "../components/Blockquote.astro";
+---
+
+<div class="columns" id="introduction">
+  <div class="column left">
+    <img
+      src="/slowbuilt-book-promo-manual-edit2.png"
+      alt="Book cover image for Slowbuilt: Education, Growth, and Grace (January 2026)"
+      class="book-image"
+    />
+  </div>
+
+  <div class="column right">
+    <hgroup>
+      <h2>Slowbuilt</h2>
+      <p>Education, Growth, and Grace</p>
+    </hgroup>
+
+    <p class="data">Release date: January 2026</p>
+    <p class="data">ISBN: 9798263584757</p>
+
+    <p>
+      <strong>Slowbuilt: Education, Growth, and Grace (January 2026)</strong> is the
+      book I wish someone had handed me the day I walked into a classroom. Part memoir,
+      part field guide, it’s everything school never taught us about becoming who
+      we were meant to be for students, for teachers, and for leaders.
+    </p>
+
+    <p>
+      Slowbuilt is not a book about being smart, gifted, or getting ahead. It’s
+      about what happens when school, success, and identity quietly miss a large
+      group of thoughtful, capable people. Blending lived classroom experience,
+      personal reflection, and clear psychological insight, Slowbuilt explores
+      how curiosity gets buried, why so many students and adults feel “behind”
+      despite doing everything right, and what growth actually looks like when
+      it isn’t fast, flashy, or rewarded on time.
+    </p>
+    <p>
+      This book doesn’t promise shortcuts. It offers something rarer: language
+      for what you’ve felt but couldn’t name, and a steadier, more humane way
+      forward.
+    </p>
+
+    <ul class="links">
+      <li>
+        <a
+          class="yellow"
+          href="https://www.amazon.com/s?k=slowbuilt+book&crid=SSCAZA8ZACBI&sprefix=%2Caps%2C190&ref=nb_sb_ss_recent_2_0_recent"
+          >Order on Amazon
+        </a>
+      </li>
+      <li>
+        <a class="yellow" href="mailto:mark@markgodi.com"
+          >Signed Copy/Contact me</a
+        >
+      </li>
+    </ul>
+    <!-- <Blockquote>Quote from Cori Sinclair on Amazon - middle school teacher</Blockquote> -->
+    <!-- <Blockquote>Quote from Tara cuslidge on Amazon - Delta college professor</Blockquote> -->
+  </div>
+</div>
+
+<style>
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-block: 3rem 3rem;
+  }
+
+  @media (min-width: 120ch) {
+    .columns {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+
+  .columns > .column {
+    flex: 1;
+  }
+
+  .left {
+    max-width: 35rem;
+  }
+
+  @media (min-width: 80ch) {
+    .left {
+      max-width: 25rem;
+    }
+  }
+
+  .left p {
+    text-align: center;
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    fit-content: cover;
+  }
+
+  img {
+    border-radius: 1rem;
+    margin-block-end: 1rem;
+  }
+
+  hgroup {
+    text-align: center;
+  }
+
+  @media (min-width: 80ch) {
+    hgroup {
+      text-align: left;
+    }
+  }
+
+  hgroup h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-block: 0 1.25rem;
+    color: #244057;
+  }
+
+  hgroup p {
+    font-family: "EB Garamond", serif;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    color: #244057;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .data {
+    color: #666;
+    font-style: italic;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .data + .data {
+    margin-top: 0.25rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: 80ch) {
+    .links {
+      flex-direction: row;
+      margin: 2rem 0;
+      justify-content: flex-start;
+    }
+  }
+
+  .links a {
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 0.02rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    min-width: 20rem;
+    transition: all 0.3s;
+    margin-top: 0rem;
+    color: #244057;
+    background-color: #ebc975;
+  }
+  @media (min-width: 80ch) {
+    .links a {
+      padding: 0.8rem 2rem;
+      min-width: 15rem;
+      text-align: center;
+    }
+  }
+
+  .links a:hover {
+    background-color: #244057;
+    color: white;
+    transition: all 0.3s;
+  }
+</style>

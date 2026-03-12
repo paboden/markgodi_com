@@ -1,0 +1,110 @@
+---
+import Navigation from "./Navigation.astro";
+---
+
+<header class="blue shadow">
+  <div class="container">
+    <div class="branding">
+      <div class="branding__logo logo_wrapper yellow">
+        <a href="#home">
+          <img
+            src="/website-logo.png"
+            alt="Mark Godi Logo"
+            class="logo"
+            width="48"
+            height="48"
+          />
+        </a>
+      </div>
+
+      <div class="branding__text">
+        <a href="#home">
+          <span>MarkGodi<em>.com</em></span>
+          <!-- <p>Teacher | Author | WASC Coordinator | Speaker</p> -->
+        </a>
+      </div>
+    </div>
+
+    <Navigation />
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-filter: blur(2rem);
+  }
+
+  header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block: 1rem;
+  }
+
+  .branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .branding .logo_wrapper {
+    border-radius: 50%;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .branding .logo {
+    border-radius: 50%;
+    background-color: white;
+    padding: 0.2rem;
+    display: flex;
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .branding__text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .branding__text a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+
+  .branding__text span {
+    font-family: "EB Garamond", serif;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  .branding__text p {
+    font-family: "EB Garamond", serif;
+    font-size: clamp(1rem, 2vw, 1rem);
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .branding__text em {
+    font-size: 1.25rem;
+    opacity: 0.85;
+    margin-inline-start: 0.15em;
+  }
+</style>

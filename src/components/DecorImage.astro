@@ -1,0 +1,61 @@
+---
+import Container from "../layouts/Container.astro";
+
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+  src: string;
+  alt?: string;
+  size?: "small" | "medium" | "large" | "extra";
+}
+
+const { src, size = "medium", alt = "Decorative image", ...attr } = Astro.props;
+---
+
+<div class:list={["decor-image-wrapper", size, attr.class]}>
+  <img class="decor-image" src={src} alt={alt} />
+</div>
+
+<style>
+  .decor-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 4rem;
+  }
+
+  .decor-image {
+    width: 100%;
+    width: clamp(6rem, 20vw, 8rem);
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .small .decor-image {
+    width: clamp(6rem, 20vw, 8rem);
+  }
+
+  .medium .decor-image {
+    width: clamp(10rem, 25vw, 14rem);
+  }
+
+  .large .decor-image {
+    width: clamp(12rem, 30vw, 18rem);
+  }
+
+  .extra .decor-image {
+    width: clamp(18rem, 40vw, 25rem);
+  }
+
+  .stamp-styled {
+    /* border-radius: 9000px;
+    border: 0.4rem solid #244057;
+    padding: 0.5rem;
+    background-color: white; */
+    max-width: 15rem;
+  }
+
+  .preston-footer-logo {
+    margin-block-end: 0.5rem;
+  }
+</style>

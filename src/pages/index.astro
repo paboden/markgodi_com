@@ -1,134 +1,79 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import Intro from "../components/Intro.astro";
+import About from "../components/About.astro";
+import Header from "../components/Header.astro";
+import BookCallout from "../components/BookCallout.astro";
+import Blockquote from "../components/Blockquote.astro";
 import Layout from "../layouts/Layout.astro";
+import Container from "../layouts/Container.astro";
+import BlogCallout from "../components/BlogCallout.astro";
+import ConnectCallout from "../components/ConnectCallout.astro";
+import WorkshopCallout from "../components/WorkshopCallout.astro";
+import DecorImage from "../components/DecorImage.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <img src="public/profile_pic.jpg" alt="Mark Godi" class="profile-pic" />
+  <div id="home"></div>
 
-  <hgroup>
-    <h1>MarkGodi<em>.com</em></h1>
-    <p>Teacher - Author - Consultant</p>
-  </hgroup>
+  <Header />
 
-  <p>
-    I’m Mark Godi — educator, author, and the person called when accreditation
-    is on the line and uncertainty is winning.
-  </p>
+  <main>
+    <Container bg="white" spacing="extra" id="intro">
+      <Intro />
+    </Container>
 
-  <p>
-    For the last twenty years I’ve worked in public schools as a teacher,
-    administrator, and turnaround specialist. I’ve taken campuses from “possible
-    probation” to celebrated WASC models, led credential certification for
-    future teachers through University of the Pacific, and keynoted statewide
-    conferences on the evolving landscape of college and career readiness.
-  </p>
+    <Blockquote class="shadow">
+      My mission is simple: <br />help schools, teams, and individuals trade
+      “hustle culture” for results, depth, relationships, and real learning that
+      lasts.
+    </Blockquote>
 
-  <p>
-    My mission is simple: help schools, teams, and individuals trade “hustle
-    culture” for results, depth, relationships, and real learning that lasts.
-  </p>
-  <hr />
+    <Container bg="tan" id="about" spacing="extra">
+      <DecorImage size="medium" src="/preston-looking-cutout.png" />
+      <About />
+    </Container>
 
-  <h2>Credentials & Experience</h2>
-  <ul>
-    <li>San Joaquin Delta College → University of the Pacific</li>
-    <li>Master’s in Digital Journalism — National University</li>
-    <li>Temporary Adjuct Profession → San Joaquin Delta College</li>
-    <li>
-      20+ years in public education as teacher, administrator, and turnaround
-      specialist
-    </li>
-    <li>WASC Coordinator and School-Site Visiting Commitee</li>
-    <li>Keynote speaker — 2025 NorCal WASC Conference and statewide events</li>
-  </ul>
-  <hr />
+    <!-- <Container bg="tan" spacing="small">
+    </Container> -->
 
-  <img
-    src="public/slobuilt_book_image_1.webp"
-    alt="Book cover image for Slowbuilt: Education, Growth, and Grace (January 2026)"
-    class="book-image"
-  />
+    <Blockquote class="shadow">
+      "Your pace is your power and no one does it alone."
+    </Blockquote>
 
-  <hgroup>
-    <h2>Slowbuilt</h2>
-    <p>Education, Growth, and Grace</p>
-  </hgroup>
+    <Container bg="white" id="book" spacing="extra">
+      <DecorImage size="large" src="/preston-reading-cutout.png" />
+      <BookCallout />
+    </Container>
 
-  <p>Release date: January 2026</p>
+    <Container bg="tan" id="workshops" spacing="extra">
+      <DecorImage size="extra" src="/preston-pencil-cutout.png" />
+      <WorkshopCallout />
+    </Container>
 
-  <p>
-    Slowbuilt: Education, Growth, and Grace (January 2026) is the book I wish
-    someone had handed me the day I walked into a classroom. Part memoir, part
-    field guide, it’s everything school never taught us about becoming who we
-    were meant to be — for students, for teachers, and for leaders.
-  </p>
+    <Container bg="white" id="connect">
+      <DecorImage size="medium" src="/preston-thinking-cutout.png" />
+      <ConnectCallout />
+    </Container>
 
-  <p>
-    Slowbuilt is not a book about being smart, gifted, or getting ahead—it’s
-    about what happens when school, success, and identity quietly miss a large
-    group of thoughtful, capable people. Blending lived classroom experience,
-    personal reflection, and clear psychological insight, Slowbuilt explores how
-    curiosity gets buried, why so many students and adults feel “behind” despite
-    doing everything right, and what growth actually looks like when it isn’t
-    fast, flashy, or rewarded on time. This book doesn’t promise shortcuts. It
-    offers something rarer: language for what you’ve felt but couldn’t name—and
-    a steadier, more humane way forward.
-  </p>
+    <Container bg="white" id="blog" spacing="small">
+      <BlogCallout />
+    </Container>
+  </main>
 
-  <ul>
-    <li>
-      <a
-        href="https://www.amazon.com/s?k=slowbuilt+book&crid=SSCAZA8ZACBI&sprefix=%2Caps%2C190&ref=nb_sb_ss_recent_2_0_recent"
-        >Order on Amazon
-      </a>
-    </li>
-    <li><a href="mailto:mark@markgodi.com">Signed Copy/Contact me</a></li>
-  </ul>
+  <Container bg="tan" class="shadow" spacing="extra">
+    <DecorImage
+      size="large"
+      src="/preston-main-cutout.png"
+      class="preston-footer-logo"
+    />
+    <p class="preston-comment">FYI, this is Payton the tortoise.</p>
+  </Container>
 
-  <hr />
-  <h2>Blog</h2>
-
-  <p>Subscribe for a fresh take on education each week!</p>
-  <ul>
-    <li>
-      <a
-        href="https://substack.com/@markgodi?r=7atdwj&utm_medium=ios&utm_source=profile&shareImageVariant=light"
-        >Read the Blog
-      </a>
-    </li>
-  </ul>
-
-  <hr />
-  <h2>Workshops & Keynotes</h2>
-  <p>
-    I offer workshops, keynotes, and coaching for schools, districts, and
-    organizations. My work is focused on helping educators and leaders build
-    sustainable, student-centered learning environments that prioritize depth,
-    relationships, and real growth over hustle culture.
-  </p>
-  <p>
-    If you’re ready to bring workshops, keynotes, or coaching to your campus or
-    district, let’s talk.
-  </p>
-
-  <hr />
-  <h2>Let's Connect</h2>
-  <p>
-    I'm available for speaking engagements, consulting, and coaching. If you're
-    interested in working together or learning more about my work, please reach
-    out.
-  </p>
-
-  <ul>
-    <li><a href="#">Blog</a></li>
-    <li><a href="https://linkedin.com/in/markgodi/">LinkedIn</a></li>
-    <li><a href="mailto:mark@markgodi.com">Email</a></li>
-  </ul>
-  <hr />
+  <Footer />
 </Layout>
 
-<style>
+<style is:global>
   @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
   * {
@@ -136,12 +81,22 @@ import Layout from "../layouts/Layout.astro";
   }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+      BlinkMacSystemFont,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
     line-height: 1.6;
+    font-size: 1.125rem;
     color: #333;
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    scroll-behavior: smooth;
   }
 
   h1,
@@ -153,26 +108,42 @@ import Layout from "../layouts/Layout.astro";
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin-block-end: 0.25em;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 7vw, 2.75rem);
   }
 
-  hgroup p {
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .preston-comment {
     font-family: "EB Garamond", serif;
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
     font-style: italic;
-  }
-
-  .profile-pic {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 9000px;
-    object-fit: cover;
-    margin-bottom: 1rem;
+    color: #555;
+    margin-top: 1rem;
+    text-align: center;
   }
 </style>
+
+<!-- <Container bg="tan" spacing="extra">
+    <Blockquote class="center-align">
+      "Slow or late doesn't mean not valid."
+    </Blockquote>
+  </Container> -->
+
+<!-- <Container bg="yellow" spacing="extra">
+    <Blockquote> Quote here -- from someone </Blockquote>
+  </Container> -->
+
+<!-- <Container bg="white" spacing="extra">
+    <BlogCallout />
+  </Container> -->
