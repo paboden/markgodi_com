@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://paboden.github.io',
   base: '/markgodi_com',
-  publicDir: './public/markgodi_com',
+  publicDir: './public',
   redirects: {
     '/about': '/markgodi_com/#about',
     '/book': '/markgodi_com/#book',
