@@ -5,7 +5,7 @@ import DecorImage from "./DecorImage.astro";
 import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png";
 ---
 
-<Container bg="white" id="connect">
+<Container bg="white" id="connect" spacing="extra">
   <DecorImage src={prestonThinkingCutout} width={225} height={250} />
 
   <h2>Let's Connect</h2>
@@ -16,7 +16,6 @@ import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png"
     out.
   </p>
 
-  <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
   <ul class="social-links">
     <li>
       <a
@@ -110,10 +109,6 @@ import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png"
     }
   }
 
-  .social-links li {
-    /* display: inline-block; */
-  }
-
   .social-links a {
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -123,7 +118,7 @@ import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png"
     font-size: 1rem;
     transition: color 0.2s;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     text-align: center;
     font-weight: 500;
     transition: all 0.3s;
@@ -131,13 +126,11 @@ import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png"
     background-color: #ebc975;
     color: #244057;
     justify-content: center;
-    max-width: 25rem;
+    max-width: 100%;
   }
 
-  @media (min-width: 120ch) {
+  @media (min-width: 80ch) {
     .social-links a {
-      /* padding: 1rem 2rem; */
-      /* min-width: 15rem; */
       justify-content: center;
       text-align: center;
       flex-direction: row;
@@ -147,7 +140,6 @@ import prestonThinkingCutout from "../assets/images/preston-thinking-cutout.png"
   }
 
   .social-links a:hover {
-    /* background-color: #e3ba3f; */
     background-color: #244057;
     color: white;
     transition: all 0.3s;

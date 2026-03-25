@@ -17,7 +17,7 @@ const {
         <blockquote class:list={["blockquote", style]}>
           <slot />
           {citation || note ? (
-            <figcaption class="right-align">
+            <figcaption>
               {citation && <cite class="citation">{citation}</cite>}
               {note && <p class="note">{note}</p>}
             </figcaption>
@@ -30,7 +30,7 @@ const {
       <blockquote class:list={["blockquote", style]}>
         <slot />
         {citation || note ? (
-          <figcaption class="right-align">
+          <figcaption>
             {citation && <cite class="citation">{citation}</cite>}
             {note && <p class="note">{note}</p>}
           </figcaption>
@@ -43,14 +43,13 @@ const {
 <style>
   .blockquote {
     font-family: var(--font-garamond);
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     font-style: italic;
     line-height: 1.25;
     margin: 2rem auto;
     padding: 0;
     text-align: center;
     text-wrap: balance;
-    text-indent: clamp(1rem, 4dvw, 3rem);
   }
 
   @media (min-width: 90ch) {
@@ -62,6 +61,7 @@ const {
   .blockquote.alternate {
     font-size: clamp(1.5rem, 4vw, 1.75rem);
     text-align: left;
+    text-indent: clamp(1rem, 4dvw, 3rem);
   }
 
   .left-align {
@@ -92,6 +92,16 @@ const {
   .blockquote.alternate figcaption {
     font-size: 1.25rem;
     color: #444;
+    text-align: left;
+    text-indent: 0;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 120ch) {
+    .blockquote.alternate figcaption {
+      text-align: right;
+      text-indent: 0;
+    }
   }
 
   .blockquote.alternate .note {

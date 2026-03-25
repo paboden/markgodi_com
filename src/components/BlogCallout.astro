@@ -32,11 +32,10 @@ import Container from "../layouts/Container.astro";
     justify-content: center;
   }
 
-  h2 {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    line-height: 1.2;
-    margin-block: 0 1.25rem;
-    color: #244057;
+  p {
+    max-width: 70ch;
+    margin: 0 auto;
+    text-align: center;
   }
 
   iframe {
@@ -47,18 +46,26 @@ import Container from "../layouts/Container.astro";
   .links {
     display: flex;
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
     padding: 0;
     list-style: none;
     padding: 0;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+  }
+  .links ul {
+    width: 100%;
+    justify-content: center;
   }
 
   @media (min-width: 80ch) {
     .links {
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: center;
+    }
+    .links ul {
+      width: unset;
     }
   }
 
@@ -73,7 +80,7 @@ import Container from "../layouts/Container.astro";
     display: inline-block;
     text-align: center;
     font-weight: 500;
-    min-width: 20rem;
+    min-width: 100%;
     transition: all 0.3s;
     margin-top: 0rem;
     background-color: #ebc975;
@@ -82,7 +89,7 @@ import Container from "../layouts/Container.astro";
   @media (min-width: 80ch) {
     .links a {
       padding: 1rem 2rem;
-      min-width: 15rem;
+      min-width: 16rem;
       text-align: center;
     }
   }

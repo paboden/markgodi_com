@@ -16,9 +16,12 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
         src={slowbuiltBookCoverImage}
         alt="Book cover image for Slowbuilt: Education, Growth, and Grace (January 2026)"
         class="book-image"
-        width={400}
-        height={500}
+        width={360}
+        height={450}
         layout="constrained"
+        widths={[240, 540, 720, 1214]}
+        sizes={`(max-width: 360px) 240px, (max-width: 540px) 360px, (max-width: 720px) 540px, (max-width: 1200px) 720px, 1214px`}
+        format="webp"
       />
     </div>
 
@@ -97,7 +100,7 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
 
   @media (min-width: 80ch) {
     .left {
-      max-width: 25rem;
+      max-width: 21rem;
     }
   }
 
@@ -137,7 +140,6 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
 
   hgroup p {
     font-family: var(--font-garamond);
-    /* font-family: "EB Garamond", serif; */
     font-size: clamp(1.5rem, 4vw, 2.25rem);
     color: #244057;
     margin-top: 0;
@@ -165,6 +167,7 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
     padding: 0;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
   }
 
   @media (min-width: 80ch) {
@@ -173,6 +176,10 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
       margin: 2rem 0;
       justify-content: flex-start;
     }
+  }
+
+  .links li {
+    width: 100%;
   }
 
   .links a {
@@ -186,16 +193,19 @@ import slowbuiltBookCoverImage from "../assets/images/slowbuilt-book-promo-manua
     display: inline-block;
     text-align: center;
     font-weight: 500;
-    min-width: 20rem;
+    min-width: 100%;
     transition: all 0.3s;
     margin-top: 0rem;
     color: #244057;
     background-color: #ebc975;
   }
   @media (min-width: 80ch) {
+    .links li {
+      width: unset;
+    }
     .links a {
       padding: 0.8rem 2rem;
-      min-width: 15rem;
+      min-width: 16rem;
       text-align: center;
     }
   }

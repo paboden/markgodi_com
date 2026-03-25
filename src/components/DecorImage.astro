@@ -23,9 +23,8 @@ const {
   .decor-image-wrapper {
     display: flex;
     justify-content: center;
-    margin: 0 auto 4rem;
+    margin: 0 auto clamp(4rem, 8vw, 6rem);
   }
-
   .decor-image {
     max-width: 100%;
     height: auto;
@@ -35,5 +34,11 @@ const {
 
   .preston-footer-logo {
     margin-block-end: 0.5rem;
+  }
+
+  @media (max-width: 120ch) {
+    .decor-image-wrapper {
+      max-width: 70%;
+    }
   }
 </style>
