@@ -33,7 +33,8 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
       name: "EB Garamond",
       cssVariable: "--font-garamond",
-      fallbacks: ["serif"]
+      fallbacks: ["serif"],
+      weights: ["400 500 600"]
     }
   ]
 });

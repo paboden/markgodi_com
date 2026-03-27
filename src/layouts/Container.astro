@@ -17,15 +17,16 @@ const { bg = "", spacing = "normal", ...attr } = Astro.props;
 
 <style is:global>
   section {
-    display: flex;
+    display: block;
     flex-direction: column;
     scroll-margin-top: 3rem;
+    padding-inline: 0;
   }
 
   .container {
-    width: clamp(36ch, 100%, 120ch);
     margin: 0 auto;
     padding: 3rem 1.5rem 3.25rem;
+    max-width: 120ch;
   }
 
   .none > .container {
