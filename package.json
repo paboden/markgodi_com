@@ -9,7 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.0.6",
+    "astro": "^6.1.7",
     "astro-robots-txt": "^1.0.0"
   }
 }
